@@ -1,0 +1,3 @@
+.config/oh-my-zsh/.*
+.config/oh-my-zsh/.*/**/*
+.config/oh-my-zsh/cache/**/*
