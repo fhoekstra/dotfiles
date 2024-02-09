@@ -1,3 +1,23 @@
+# Set chassisType to "laptop" or "desktop"
+{{- $chassisType := "desktop" }}
+{{- if eq .chezmoi.os "darwin" }}
+{{-   if contains "MacBook" (output "sysctl" "-n" "hw.model") }}
+{{-     $chassisType = "laptop" }}
+{{-   else }}
+{{-     $chassisType = "desktop" }}
+{{-   end }}
+{{- else if eq .chezmoi.os "linux" }}
+{{-   $chassisType = (output "hostnamectl" "--json=short" | mustFromJson).Chassis }}
+{{- else if eq .chezmoi.os "windows" }}
+{{-   $chassisType = (output "powershell.exe" "-NoProfile" "-NonInteractive" "-Command" "if ((Get-CimInstance -Class Win32_Battery | Measure-Object).Count -gt 0) { Write-Output 'laptop' } else { Write-Output 'desktop' }") | trim }}
+{{- end }}
+
+# Oh My ZSH 
 .config/oh-my-zsh/.*
 .config/oh-my-zsh/.*/**/*
 .config/oh-my-zsh/cache/**/*
+
+{{ if ne $chassisType "laptop" -}}
+# Kanshi is a tool for dynamically configuring wlr outputs, not needed for desktop
+.config/kanshi
+{{- end }}
