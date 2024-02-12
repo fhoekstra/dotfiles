@@ -12,6 +12,10 @@
 {{-   $chassisType = (output "powershell.exe" "-NoProfile" "-NonInteractive" "-Command" "if ((Get-CimInstance -Class Win32_Battery | Measure-Object).Count -gt 0) { Write-Output 'laptop' } else { Write-Output 'desktop' }") | trim }}
 {{- end }}
 
+# LICENSE, README, etc.
+LICENSE*
+README*
+
 # Oh My ZSH 
 .config/oh-my-zsh/.*
 .config/oh-my-zsh/.*/**/*
