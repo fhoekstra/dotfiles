@@ -23,13 +23,13 @@ exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 
 # Browser, terminal, etc, to fill the workspaces
 workspace 2
-exec xfce4-terminal
+exec $term-float
 exec sleep 0.1
 workspace 3
 exec firefox
 exec sleep 0.3
 workspace 4
-exec xfce4-terminal -e 'zsh -c "cd ~/Source"'
+exec kitty --hold --directory '~/Source'
 exec sleep 0.1
 workspace 1
 exec chromium
