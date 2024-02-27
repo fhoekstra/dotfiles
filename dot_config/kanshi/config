@@ -60,12 +60,12 @@ profile home_philips_high_refresh {
 
 profile home_setup_low_refresh {
     output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,1680 adaptive_sync on
-    output 'Messeltronik Dresden GmbH MD 20102 0x00000101' enable mode 1680x1050@59.954Hz transform 90 position 870,0
+    output 'Messeltronik Dresden GmbH MD 20102 0x01010101' enable mode 1680x1050@59.954Hz transform 90 position 870,0
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@59.951Hz transform normal position 1920,0
 }
 
 profile home_setup_high_refresh {
     output eDP-2 enable mode 1920x1200@72.010Hz transform normal position 0,1680 adaptive_sync on
-    output 'Messeltronik Dresden GmbH MD 20102 0x00000101' enable mode 1680x1050@59.954Hz transform 90 position 870,0
+    output 'Messeltronik Dresden GmbH MD 20102 0x01010101' enable mode 1680x1050@59.954Hz transform 90 position 870,0
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@74.968Hz transform normal position 1920,0
 }
