@@ -7,14 +7,14 @@ exec mako
 # Network Applet
 exec nm-applet --indicator
 
-# Kanshi: automatic output configuration daemon
-exec /usr/bin/kanshi
-
 # GTK3 applications take a long time to start
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
      
+# Kanshi: automatic output configuration daemon
+exec sleep 0.5 && /usr/bin/kanshi
+
 # Welcome App
 exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/  
 
