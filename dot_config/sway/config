@@ -12,9 +12,6 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 # user config directory
 include $HOME/.config/sway/config.d/*
 
-# set gap on workspace 2 for screen2 being partially covered by laptop
-workspace 2 gaps bottom 300
-
 # bind workspaces 1,2,3 to outputs
 workspace 1 output eDP-2
 workspace 2 output HDMI-A-1

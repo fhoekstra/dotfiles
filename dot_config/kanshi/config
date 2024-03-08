@@ -1,7 +1,7 @@
 # HDMI port only
 
 profile hdmi_4k {
-    output HDMI-A-1 mode 3840x2160 enable transform normal position 3840,0
+    output HDMI-A-1 mode 3840x2160 enable scale 1.25 transform normal position 3840,0
     output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
@@ -16,6 +16,11 @@ profile hdmi_1080p {
 }
 
 # USB-C only
+
+profile usb_ultrawide {
+    output DP-1 mode 3440x1440 enable transform normal position 0,0 
+    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,1440
+}
 
 profile usb_4k {
     output DP-1 mode 3840x2160 enable transform normal position 3840,0
@@ -32,7 +37,6 @@ profile usb_1080p {
     output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
-
 # internal screen only
 
 profile int_only_60 {
@@ -47,25 +51,25 @@ profile int_only_gaming {
 # Philips only
 
 profile home_philips_low_refresh {
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,1680 adaptive_sync on
+    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,1050 adaptive_sync on
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@59.951Hz transform normal position 1920,0
 }
 
 profile home_philips_high_refresh {
-    output eDP-2 enable mode 1920x1200@72.010Hz transform normal position 0,1680 adaptive_sync on
+    output eDP-2 enable mode 1920x1200@72.010Hz transform normal position 0,1050 adaptive_sync on
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@74.968Hz transform normal position 1920,0
 }
 
 # home triple screen setup
 
 profile home_setup_low_refresh {
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,1680 adaptive_sync on
-    output 'Messeltronik Dresden GmbH MD 20102 0x01010101' enable mode 1680x1050@59.954Hz transform 90 position 870,0
+    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,1050 adaptive_sync on
+    output 'Messeltronik Dresden GmbH MD 20102 0x01010101' enable mode 1680x1050@59.954Hz transform normal position 240,0
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@59.951Hz transform normal position 1920,0
 }
 
 profile home_setup_high_refresh {
-    output eDP-2 enable mode 1920x1200@72.010Hz transform normal position 0,1680 adaptive_sync on
-    output 'Messeltronik Dresden GmbH MD 20102 0x01010101' enable mode 1680x1050@59.954Hz transform 90 position 870,0
+    output eDP-2 enable mode 1920x1200@72.010Hz transform normal position 0,1050 adaptive_sync on
+    output 'Messeltronik Dresden GmbH MD 20102 0x01010101' enable mode 1680x1050@59.954Hz transform normal position 240,0
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@74.968Hz transform normal position 1920,0
 }
