@@ -34,9 +34,9 @@ elif [ $1 = "normal" ]; then
     sway-input input type:mouse accel_profile adaptive
 	corectrl -m normal
 	powerprofilesctl set balanced
-	supergfxctl -m Integrated
-    if [ "Integrated" != "${GPU_MODE_BEFORE}" ]; then
-        notify-send "Relog required" "Due to switching the GPU mode, you need to log out and back in again." --icon=system-reboot
+	supergfxctl -m Hybrid
+    if [ "Hybrid" != "${GPU_MODE_BEFORE}" ]; then
+        notify-send "Relog required" "[Hybrid] Due to switching the GPU mode, you need to log out and back in again." --icon=system-reboot
     fi
 elif [ $1 = "battery" ]; then
 	set_output_slow
@@ -46,7 +46,7 @@ elif [ $1 = "battery" ]; then
 	brightnessctl set 0
 	supergfxctl -m Integrated
     if [ "Integrated" != "${GPU_MODE_BEFORE}" ]; then
-        notify-send "Relog required" "Due to switching the GPU mode, you need to log out and back in again." --icon=system-reboot
+        notify-send "Relog required" "[Integrated] Due to switching the GPU mode, you need to log out and back in again." --icon=system-reboot
     fi
 elif [ $1 = "gaming" ]; then
 	set_output_fast
@@ -56,7 +56,7 @@ elif [ $1 = "gaming" ]; then
 	brightnessctl set 100%
 	supergfxctl -m Hybrid
     if [ "Hybrid" != "${GPU_MODE_BEFORE}" ]; then
-        notify-send "Relog required" "Due to switching the GPU mode, you need to log out and back in again." --icon=system-reboot
+        notify-send "Relog required" "[Hybrid] Due to switching the GPU mode, you need to log out and back in again." --icon=system-reboot
     fi
 fi
 
