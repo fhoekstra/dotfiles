@@ -2,7 +2,7 @@
 
 profile office_1440p {
     output 'Philips Consumer Electronics Company PHL 276B9 UHB2338023187' mode 2560x1440@59.951Hz scale 1.0 position 0,-1440
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
     exec swaymsg workspace 2, move workspace to output 'Unknown Unknown Unknown'
     exec swaymsg workspace 3, move workspace to output 'Unknown Unknown Unknown'
 }
@@ -10,25 +10,25 @@ profile office_1440p {
 # Philips home only
 
 profile home_philips_low_refresh {
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,1050 adaptive_sync on
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,1050 adaptive_sync on
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@59.951Hz scale 1.0 transform normal position 1920,0
 }
 
 profile home_philips_high_refresh {
-    output eDP-2 enable mode 1920x1200@72.010Hz transform normal position 0,1050 adaptive_sync on
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@72.010Hz transform normal position 0,1050 adaptive_sync on
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@74.968Hz scale 1.0 transform normal position 1920,0
 }
 
 # home triple screen setup
 
 profile home_setup_low_refresh {
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,1050 adaptive_sync on
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,1050 adaptive_sync on
     output 'Messeltronik Dresden GmbH MD 20102 0x01010101' enable mode 1680x1050@59.954Hz scale 1.0 transform normal position 240,0
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@59.951Hz scale 1.0 transform normal position 1920,0
 }
 
 profile home_setup_high_refresh {
-    output eDP-2 enable mode 1920x1200@72.010Hz transform normal position 0,1050 adaptive_sync on
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@72.010Hz transform normal position 0,1050 adaptive_sync on
     output 'Messeltronik Dresden GmbH MD 20102 0x01010101' enable mode 1680x1050@59.954Hz scale 1.0 transform normal position 240,0
     output 'Philips Consumer Electronics Company PHL 275E1 0x00002146' enable mode 2560x1440@74.968Hz scale 1.0 transform normal position 1920,0
 }
@@ -37,47 +37,48 @@ profile home_setup_high_refresh {
 
 profile hdmi_4k {
     output HDMI-A-1 mode 3840x2160 enable transform normal position 3840,0 scale 2.0
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
 profile hdmi_1440p {
     output HDMI-A-1 mode 2560x1440 enable transform normal position 2560,0
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
 profile hdmi_1080p {
     output HDMI-A-1 mode 1920x1080 enable transform normal position 1920,0
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
 # USB-C only
 
 profile usb_ultrawide {
-    output DP-1 mode 3440x1440 enable transform normal position 0,0 scale 1.2
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,1440
+    output DP-6 mode 3440x1440 enable transform normal position 0,0 scale 1.2
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,1440
 }
 
 profile usb_4k {
-    output DP-1 mode 3840x2160 enable transform normal position 3840,0 scale 2.0
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0
+    output DP-6 mode 3840x2160 enable transform normal position 3840,0 scale 2.0
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
 profile usb_1440p {
-    output DP-1 mode 2560x1440 enable transform normal position 2560,0
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0
+    output DP-6 mode 2560x1440 enable transform normal position 2560,0
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
 profile usb_1080p {
-    output DP-1 mode 1920x1080 enable transform normal position 1920,0
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0
+    output DP-6 mode 1920x1080 enable transform normal position 1920,0
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
 # internal screen only
 
 profile int_only_60 {
-    output eDP-2 enable mode 1920x1200@60.005Hz transform normal position 0,0 adaptive_sync off
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0 adaptive_sync off
 }
 
 profile int_only_gaming {
-    output eDP-2 enable mode 1920x1200@165.015Hz transform normal position 0,0 adaptive_sync on
+    output 'Unknown Unknown Unknown' enable mode 1920x1200@165.015Hz transform normal position 0,0 adaptive_sync on
 }
+
