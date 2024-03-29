@@ -53,22 +53,22 @@ profile hdmi_1080p {
 # USB-C only
 
 profile usb_ultrawide {
-    output DP-6 mode 3440x1440 enable transform normal position 0,0 scale 1.2
+    output DP-1 mode 3440x1440 enable transform normal position 0,0 scale 1.2
     output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,1440
 }
 
 profile usb_4k {
-    output DP-6 mode 3840x2160 enable transform normal position 3840,0 scale 2.0
+    output DP-1 mode 3840x2160 enable transform normal position 3840,0 scale 2.0
     output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
 profile usb_1440p {
-    output DP-6 mode 2560x1440 enable transform normal position 2560,0
+    output DP-1 mode 2560x1440 enable transform normal position 2560,0
     output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
 profile usb_1080p {
-    output DP-6 mode 1920x1080 enable transform normal position 1920,0
+    output DP-1 mode 1920x1080 enable transform normal position 1920,0
     output 'Unknown Unknown Unknown' enable mode 1920x1200@60.005Hz transform normal position 0,0
 }
 
