@@ -8,7 +8,7 @@ export ZSH="$HOME/.config/oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="freek"
+ZSH_THEME="robbyrussell"
 # SOLARIZED_THEME="dark"
 source /usr/share/LS_COLORS/dircolors.sh
 
