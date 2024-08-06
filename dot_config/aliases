@@ -8,3 +8,4 @@ alias urlencode='python -c "import sys; from urllib.parse import quote; print(qu
 alias cm='chezmoi'
 alias d='kitten diff'
 alias icat='kitten icat'
+alias lg='lazygit'
