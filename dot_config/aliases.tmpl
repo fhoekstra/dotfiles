@@ -2,10 +2,27 @@ alias ls="eza"
 alias rlls="/usr/bin/ls"
 alias cat="bat"
 alias rlcat="/usr/bin/cat"
+
 alias git-clean='CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout main && git pull --prune && git branch -d "$CURRENT_BRANCH"'
+
 alias urldecode='python -c "import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()));"'
 alias urlencode='python -c "import sys; from urllib.parse import quote; print(quote(sys.stdin.read()))"'
-alias cm='chezmoi'
+
 alias d='kitten diff'
 alias icat='kitten icat'
+
+alias cm='chezmoi'
+
 alias lg='lazygit'
+
+{{ if eq .chezmoi.osRelease.name "Red Hat Enterprise Linux" }}
+# Set up to launch nvim from distrobox if we are not in a distrobox yet.
+myvim() {
+  if [ -z "${CONTAINER_ID}" ]; then
+    distrobox enter vimbox -e /usr/bin/nvim "$@"
+  else
+    /usr/bin/nvim "$@"
+  fi
+}
+alias nvim=myvim
+{{ end }}
