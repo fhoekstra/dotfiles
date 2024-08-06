@@ -10,7 +10,11 @@ export ZSH="$HOME/.config/oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 # SOLARIZED_THEME="dark"
-source /usr/share/LS_COLORS/dircolors.sh
+
+LS_DIRCOLORS_FILE='/usr/share/LS_COLORS/dircolors.sh'
+if [ -f $LS_DIRCOLORS_FILE ]; then
+    source $LS_DIRCOLORS_FILE  
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,4 +111,6 @@ bindkey -s '^t' 'tsession\n'
 
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
+if command -v ng ; then
+    source <(ng completion script)
+fi
