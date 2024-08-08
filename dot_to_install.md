@@ -19,4 +19,3 @@ Through install scripts:
 
 - tmux package manager
 - oh my zsh (before running install: `export ZSH='$HOME/.config/oh-my-zsh'`)
-- lazyvim
