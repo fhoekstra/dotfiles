@@ -7,7 +7,11 @@
 {{-     $chassisType = "desktop" }}
 {{-   end }}
 {{- else if eq .chezmoi.os "linux" }}
-{{-   $chassisType = (output "hostnamectl" "--json=short" | mustFromJson).Chassis }}
+{{-   if eq .chezmoi.osRelease.name "Red Hat Enterprise Linux" }}
+{{-     $chassisType = "desktop" }}
+{{-   else }}
+{{-     $chassisType = (output "hostnamectl" "--json=short" | mustFromJson).Chassis }}
+{{-   end }}
 {{- else if eq .chezmoi.os "windows" }}
 {{-   $chassisType = (output "powershell.exe" "-NoProfile" "-NonInteractive" "-Command" "if ((Get-CimInstance -Class Win32_Battery | Measure-Object).Count -gt 0) { Write-Output 'laptop' } else { Write-Output 'desktop' }") | trim }}
 {{- end }}
