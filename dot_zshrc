@@ -80,6 +80,14 @@ plugins=(git docker nvm yarn virtualenv python dotenv)
 
 source $ZSH/oh-my-zsh.sh
 
+# Add box in front of prompt if on distrobox podman container
+draw_cond_box() {
+  if [ -n "${CONTAINER_ID+1}" ]; then
+    echo '📦 '
+  fi
+}
+PS1="$(draw_cond_box)${PS1}"
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
