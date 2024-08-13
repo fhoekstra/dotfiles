@@ -4,9 +4,9 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
-      codelens = {
-        enabled = true,
-      },
+      -- codelens = {
+      --   enabled = true,
+      -- },
       ---@type lspconfig.options
       servers = { -- language servers listed here will be automatically installed with mason and loaded with lspconfig
         ansiblels = {},
