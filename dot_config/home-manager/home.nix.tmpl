@@ -10,8 +10,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "adm-hoekstrf";
-  home.homeDirectory = "/home/adm-hoekstrf";
+  home.username = "{{ .chezmoi.username }}";
+  home.homeDirectory = "/home/{{ .chezmoi.username }}";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -101,7 +101,7 @@
   #
   # or
   #
-  #  /etc/profiles/per-user/adm-hoekstrf/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/{{ .chezmoi.username }}/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
    # LC_ALL = "C.UTF-8";
