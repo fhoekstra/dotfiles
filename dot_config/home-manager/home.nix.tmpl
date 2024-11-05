@@ -155,7 +155,9 @@
       ];
     };
     initExtra = ''
+    {{ if eq .chezmoi.osRelease.name "Red Hat Enterprise Linux"}}
     source ~/git/dba-ansible-automation/dev-bin/shell-functions.rc
+    {{ end }}
     # To add something to the bottom of .zshrc, find this line in ~/.config/home-manager/home.nix
     # And add it below this line in that file.
     
