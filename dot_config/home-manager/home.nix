@@ -10,8 +10,9 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "{{ .chezmoi.username }}";
-  home.homeDirectory = "/home/{{ .chezmoi.username }}";
+  imports = [
+    ./machine-specific.nix
+  ];
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -44,8 +45,8 @@
     # You got to try this
     pkgs.tldr             # Better man packages
     pkgs.eza              # Better ls
-    pkgs.duf              # Better diskspace information
-    pkgs.dust             # Better diskspace information
+    pkgs.duf              # Better diskspace information: overview
+    pkgs.dust             # Better diskspace information: searching the full tree
     pkgs.bat              # The bat is better then cat
     pkgs.delta            # Diff, but better
     pkgs.entr             # Watch a file, on change: do something
@@ -56,6 +57,7 @@
     pkgs.ddgr             # duck-duck-go...cli style
     pkgs.ripgrep          # Better grep
     pkgs.fd               # Better find
+    pkgs.chezmoi          # dotfiles manager
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -101,7 +103,7 @@
   #
   # or
   #
-  #  /etc/profiles/per-user/{{ .chezmoi.username }}/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/freek/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
    # LC_ALL = "C.UTF-8";
@@ -155,9 +157,7 @@
       ];
     };
     initExtra = ''
-    {{ if eq .chezmoi.osRelease.name "Red Hat Enterprise Linux"}}
-    source ~/git/dba-ansible-automation/dev-bin/shell-functions.rc
-    {{ end }}
+    
     # To add something to the bottom of .zshrc, find this line in ~/.config/home-manager/home.nix
     # And add it below this line in that file.
     
