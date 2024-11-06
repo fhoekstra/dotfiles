@@ -1,4 +1,7 @@
 {
   home.username = "{{ .chezmoi.username }}";
   home.homeDirectory = "{{ .chezmoi.homeDir }}";
+  {{ if eq .chezmoi.osRelease.name "Red Hat Enterprise Linux" }}
+  extraInit = "source ~/git/dba-ansible-automation/dev-bin/shell-scripts.rc"
+  {{ end }}
 }
