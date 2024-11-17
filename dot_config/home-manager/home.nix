@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 #let
 #    nixvim = import (builtins.fetchGit {
@@ -8,8 +13,8 @@
 #in
 
 let
-  machineSpecific = import ./machine-specific.nix ;
-in 
+  machineSpecific = import ./machine-specific.nix;
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -25,8 +30,7 @@ in
   # release notes.
   home.stateVersion = "24.05"; # Please read the comment before changing.
 
-#  imports = [ nixvim.homeManagerModules.nixvim ];
-
+  #  imports = [ nixvim.homeManagerModules.nixvim ];
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -38,30 +42,29 @@ in
     pkgs.yq # YAML query / formatter
 
     # Kubernetes
-    pkgs.kubectl          # Kubernetes CLI
-    pkgs.openshift        # OpenShift CLI
-    pkgs.kubectl-cnpg     # Kubernetes CloudNativePG plugin
-    pkgs.k9s              # kubernetes dashboard
-    pkgs.stern            # Kubernetes log (combine pod logs)
+    pkgs.kubectl # Kubernetes CLI
+    pkgs.openshift # OpenShift CLI
+    pkgs.kubectl-cnpg # Kubernetes CloudNativePG plugin
+    pkgs.k9s # kubernetes dashboard
+    pkgs.stern # Kubernetes log (combine pod logs)
     pkgs.helm
 
     # You got to try this
-    pkgs.tldr             # Better man packages
-    pkgs.eza              # Better ls
-    pkgs.duf              # Better diskspace information: overview
-    pkgs.dust             # Better diskspace information: searching the full tree
-    pkgs.bat              # The bat is better then cat
-    pkgs.delta            # Diff, but better
-    pkgs.entr             # Watch a file, on change: do something
-    pkgs.fzf              # Fuzzy file finder
-    pkgs.procs            # ps, but then better
-    pkgs.btop             # even better then procs
-    pkgs.sd               # sed, but then easy
-    pkgs.ddgr             # duck-duck-go...cli style
-    pkgs.ripgrep          # Better grep
-    pkgs.fd               # Better find
-    pkgs.chezmoi          # dotfiles manager
-
+    pkgs.tldr # Better man packages
+    pkgs.eza # Better ls
+    pkgs.duf # Better diskspace information: overview
+    pkgs.dust # Better diskspace information: searching the full tree
+    pkgs.bat # The bat is better then cat
+    pkgs.delta # Diff, but better
+    pkgs.entr # Watch a file, on change: do something
+    pkgs.fzf # Fuzzy file finder
+    pkgs.procs # ps, but then better
+    pkgs.btop # even better then procs
+    pkgs.sd # sed, but then easy
+    pkgs.ddgr # duck-duck-go...cli style
+    pkgs.ripgrep # Better grep
+    pkgs.fd # Better find
+    pkgs.chezmoi # dotfiles manager
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -109,30 +112,30 @@ in
   #  /etc/profiles/per-user/freek/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-   # LC_ALL = "C.UTF-8";
+    # LC_ALL = "C.UTF-8";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   home.shellAliases = {
-      update-home = "chezmoi update && home-manager switch && source ~/.zshrc";
-      update-nix = "sudo -i nix-channel --update && home-manager switch";
-      # Apps
-      lg = "lazygit";
-      cm = "chezmoi";
-      ls = "eza";
+    update-home = "chezmoi update && home-manager switch && source ~/.zshrc";
+    update-nix = "sudo -i nix-channel --update && home-manager switch";
+    # Apps
+    lg = "lazygit";
+    cm = "chezmoi";
+    ls = "eza";
 
-      # My shorthands
-      urldecode = "python -c 'import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()))'";
-      urlencode = "python -c 'import sys; from urllib.parse import quote; print(quote(sys.stdin.read()))'";
-      git-clean = "CURRENT_BRANCH=$(git rev-parse --abrev-ref HEAD) && git checkout main && git pull --prune && git branch -d \"$CURRENT_BRANCH\" ";
+    # My shorthands
+    urldecode = "python -c 'import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()))'";
+    urlencode = "python -c 'import sys; from urllib.parse import quote; print(quote(sys.stdin.read()))'";
+    git-clean = "CURRENT_BRANCH=$(git rev-parse --abrev-ref HEAD) && git checkout main && git pull --prune && git branch -d \"$CURRENT_BRANCH\" ";
   };
 
   programs.zsh = {
     enable = true;
     autosuggestion = {
-        enable = true;
+      enable = true;
     };
     sessionVariables = {
       ZSH_DISABLE_COMPFIX = "true"; # This is necessary on the multi-user setup at work
@@ -152,7 +155,7 @@ in
         "python"
         "virtualenv"
         # "rust"
-        
+
         # Frontend
         # "npm"
         # "nvm"
@@ -161,19 +164,19 @@ in
       ];
     };
     initExtra = ''
-    
-    # To add something to the bottom of .zshrc, find this line in ~/.config/home-manager/home.nix
-    # And add it below this line in that file.
-    
-    # Add box in front of prompt if on distrobox podman container
-    draw_cond_box() {
-        if [ -n "''${CONTAINER_ID+1}" ]; then
-          echo '📦'
-        fi
-    }
-    PS1="$(draw_cond_box)$PS1"
-    
-    ${(if machineSpecific ? extraInit then machineSpecific.extraInit else "")}
+
+      # To add something to the bottom of .zshrc, find this line in ~/.config/home-manager/home.nix
+      # And add it below this line in that file.
+
+      # Add box in front of prompt if on distrobox podman container
+      draw_cond_box() {
+          if [ -n "''${CONTAINER_ID+1}" ]; then
+            echo '📦'
+          fi
+      }
+      PS1="$(draw_cond_box)$PS1"
+
+      ${(if machineSpecific ? extraInit then machineSpecific.extraInit else "")}
     '';
   };
 
@@ -348,18 +351,46 @@ in
           # LSP Helm
           vim-helm
 
-          { name = "LuaSnip"; path = luasnip; }
-          { name = "catppuccin"; path = catppuccin-nvim; }
-          { name = "mini.ai"; path = mini-nvim; }
-          { name = "mini.bufremove"; path = mini-nvim; }
-          { name = "mini.comment"; path = mini-nvim; }
-          { name = "mini.indentscope"; path = mini-nvim; }
-          { name = "mini.pairs"; path = mini-nvim; }
-          { name = "mini.surround"; path = mini-nvim; }
+          {
+            name = "LuaSnip";
+            path = luasnip;
+          }
+          {
+            name = "catppuccin";
+            path = catppuccin-nvim;
+          }
+          {
+            name = "mini.ai";
+            path = mini-nvim;
+          }
+          {
+            name = "mini.bufremove";
+            path = mini-nvim;
+          }
+          {
+            name = "mini.comment";
+            path = mini-nvim;
+          }
+          {
+            name = "mini.indentscope";
+            path = mini-nvim;
+          }
+          {
+            name = "mini.pairs";
+            path = mini-nvim;
+          }
+          {
+            name = "mini.surround";
+            path = mini-nvim;
+          }
         ];
-        mkEntryFromDrv = drv:
+        mkEntryFromDrv =
+          drv:
           if lib.isDerivation drv then
-            { name = "${lib.getName drv}"; path = drv; }
+            {
+              name = "${lib.getName drv}";
+              path = drv;
+            }
           else
             drv;
         lazyPath = pkgs.linkFarm "lazy-plugins" (builtins.map mkEntryFromDrv plugins);
@@ -414,10 +445,13 @@ in
     let
       parsers = pkgs.symlinkJoin {
         name = "treesitter-parsers";
-        paths = (pkgs.vimPlugins.nvim-treesitter.withPlugins (plugins: with plugins; [
-          c
-          lua
-        ])).dependencies;
+        paths =
+          (pkgs.vimPlugins.nvim-treesitter.withPlugins (
+            plugins: with plugins; [
+              c
+              lua
+            ]
+          )).dependencies;
       };
     in
     "${parsers}/parser";
