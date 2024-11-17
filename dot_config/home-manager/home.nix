@@ -33,8 +33,9 @@ in
   home.packages = [
     pkgs.lazygit
     pkgs.zsh
-    pkgs.jq               # Json query / formatter
-    pkgs.yq               # YAML query / formatter
+    pkgs.tmux
+    pkgs.jq # Json query / formatter
+    pkgs.yq # YAML query / formatter
 
     # Kubernetes
     pkgs.kubectl          # Kubernetes CLI
@@ -176,6 +177,86 @@ in
     '';
   };
 
+  programs.tmux = {
+    enable = true;
+
+    sensibleOnTop = true;
+    keyMode = "vi";
+    mouse = true;
+    escapeTime = 1;
+
+    baseIndex = 1;
+    prefix = "C-a";
+    shell = "${pkgs.zsh}/bin/zsh";
+    terminal = "screen-256color";
+    historyLimit = 100000;
+    clock24 = true;
+    newSession = true;
+
+    plugins = with pkgs; [
+      {
+        plugin = tmuxPlugins.tokyo-night-tmux;
+        extraConfig = ''
+          set -g @tokyo-night-tmux_window_id_style fsquare
+          # set -g @tokyo-night-tmux_pane_id_style hsquare
+          # set -g @tokyo-night-tmux_zoom_id_style dsquare;
+
+          set -g status-left "#[fg=colour83][#S]" # on the left, session name
+          set -g status-right "#[fg=colour80][#H]" # on the right, hostname
+          set -g status-justify centre
+
+          setw -g monitor-activity on
+          set -g visual-activity on
+        '';
+      }
+      {
+        plugin = tmuxPlugins.resurrect;
+        extraConfig = "set -g @resurrect-strategy-nvim 'session'";
+      }
+      {
+        plugin = tmuxPlugins.continuum;
+        extraConfig = ''
+          set -g @continuum-restore 'on'
+          set -g @continuum-save-interval '60' # minutes
+        '';
+      }
+      tmuxPlugins.yank
+    ];
+    extraConfig = ''
+      # Use prefix-| to split the window horizontally 
+      # and prefix-- to split the window vertically
+      bind | split-window -h
+      bind - split-window -v
+
+      # Change window switching binds to match tab binds in lazyvim
+      bind ] next-window
+      bind [ previous-window
+
+      # Use prefix with vi movements keys to move around panes
+      # bind h select-pane -L
+      # bind j select-pane -D
+      # bind k select-pane -U
+      # bind l select-pane -R
+
+      # Smart pane switching with awareness of vim splits
+      #bind -n C-h run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys C-h) || tmux select-pane -L"
+      #bind -n C-j run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys C-j) || tmux select-pane -D"
+      #bind -n C-k run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys C-k) || tmux select-pane -U"
+      #bind -n C-l run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys C-l) || tmux select-pane -R"
+      #bind -n C-\ run "(tmux display-message -p '#{pane_current_command}' | grep -iqE '(^|\/)vim$' && tmux send-keys 'C-\\') || tmux select-pane -l"
+
+      # Use prefix with capital vi movement keys to resize panes
+      # bind -r H resize-pane -L 5
+      # bind -r J resize-pane -D 5
+      # bind -r K resize-pane -U 5
+      # bind -r L resize-pane -R 5
+
+      # Cycle through windows
+      #bind -r C-h select-window -t :-
+      #bind -r C-l select-window -t :+
+
+    '';
+  };
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -185,6 +266,7 @@ in
     extraPackages = with pkgs; [
       # Nix
       nil
+      nixfmt-rfc-style
 
       # Lua
       lua-language-server
