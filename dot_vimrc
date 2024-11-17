@@ -25,4 +25,4 @@ inoremap <silent> <C-S>         <C-O>:update<CR>
 set textwidth=0
 set wrapmargin=0
 set wrap
-set linebreak # (optional - breaks by word rather than character)
+set linebreak " (optional - breaks by word rather than character)

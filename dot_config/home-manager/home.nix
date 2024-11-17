@@ -115,7 +115,7 @@ in
   programs.home-manager.enable = true;
 
   home.shellAliases = {
-      update-home = "chezmoi update && home-manager switch && source ~/.zshrc"
+      update-home = "chezmoi update && home-manager switch && source ~/.zshrc";
       update-nix = "sudo -i nix-channel --update && home-manager switch";
       # Apps
       lg = "lazygit";
