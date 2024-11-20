@@ -15,7 +15,7 @@ Some of the tools I manage with these config files are:
 
 First, install chezmoi, pull and apply the latest version of these dotfiles with a single command:
 ```
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+sh -c "$(curl -fsLS get.chezmoi.io/lb)" -- init --apply $GITHUB_USERNAME
 ```
 
 Then, install Nix:
