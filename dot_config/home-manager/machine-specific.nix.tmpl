@@ -3,5 +3,5 @@ import ./hosts/rhel.nix
 {{ else if and (eq .chezmoi.osRelease.name "Fedora Linux") (eq .chezmoi.hostname "fedora") }}
 import ./hosts/fedora-laptop.nix
 {{ else }}
-import ./hosts/default
+import ./hosts/default.nix
 {{ end }}
