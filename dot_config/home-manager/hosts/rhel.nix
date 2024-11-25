@@ -17,5 +17,8 @@
 
     # Source our DBA scripts
     source ~/git/dba-ansible-automation/dev-bin/shell-functions.rc
+
+    # Add alias for login to Kubernetes cluster
+    alias klog='oc login -u hoekstrf --server=https://api.ota-int.containerhostingplatform.nl:6443'
   '';
 }
