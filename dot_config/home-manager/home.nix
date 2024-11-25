@@ -195,6 +195,7 @@ in
     historyLimit = 100000;
     clock24 = true;
     newSession = true;
+    disableConfirmationPrompt = true;
 
     plugins = with pkgs; [
       {
