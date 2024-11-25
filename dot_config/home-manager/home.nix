@@ -154,6 +154,7 @@ in
         "docker"
         "python"
         "virtualenv"
+        "kubectl"
         # "rust"
 
         # Frontend
