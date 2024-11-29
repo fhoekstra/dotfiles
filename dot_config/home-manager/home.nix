@@ -323,6 +323,7 @@ in
           gitsigns-nvim
           indent-blankline-nvim
           lualine-nvim
+          markview-nvim
           neo-tree-nvim
           neoconf-nvim
           neodev-nvim
