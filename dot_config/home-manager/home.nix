@@ -316,11 +316,11 @@ in
           cmp-path
           cmp_luasnip
           conform-nvim
-          dashboard-nvim
           dressing-nvim
           flash-nvim
           friendly-snippets
           gitsigns-nvim
+          grug-far-nvim
           indent-blankline-nvim
           lualine-nvim
           markview-nvim
@@ -342,19 +342,27 @@ in
           nvim-web-devicons
           persistence-nvim
           plenary-nvim
+          refactoring-nvim
           snacks-nvim
+          SchemaStore-nvim
           telescope-fzf-native-nvim
           telescope-nvim
           todo-comments-nvim
           tokyonight-nvim
           trouble-nvim
+          ts-comments-nvim
           vim-illuminate
           vim-startuptime
+          vim-dadbod
+          vim-dadbod-ui
+          vim-dadbod-completion
           which-key-nvim
 
-          # LSP Helm
-          vim-helm
+          # Missing from Nixpkgs:
+          # nvim-ansible (not the same as ansible-vim)
+          # venv-selector
 
+          vim-helm
           {
             name = "LuaSnip";
             path = luasnip;
@@ -373,6 +381,10 @@ in
           }
           {
             name = "mini.comment";
+            path = mini-nvim;
+          }
+          {
+            name = "mini.icons";
             path = mini-nvim;
           }
           {
