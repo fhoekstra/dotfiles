@@ -10,5 +10,7 @@
   # these themes should be automatically applied to:
   # - nvim
   # - tmux
-  # - zsh
+  # - btop
+  # - k9s
+  # - zsh?
 }
