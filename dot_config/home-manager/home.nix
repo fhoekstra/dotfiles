@@ -47,7 +47,7 @@ in
     pkgs.kubectl-cnpg # Kubernetes CloudNativePG plugin
     pkgs.k9s # kubernetes dashboard
     pkgs.stern # Kubernetes log (combine pod logs)
-    pkgs.helm
+    pkgs.kubernetes-helm
 
     # You got to try this
     pkgs.tldr # Better man packages
