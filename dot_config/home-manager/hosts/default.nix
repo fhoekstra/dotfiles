@@ -1,7 +1,7 @@
 {
-  username = "freek";
-  homeDirectory = "/home/freek";
-  theme = "tokyo-night";
+  home.username = "freek";
+  home.homeDirectory = "/home/freek";
+  # theme = "tokyo-night";
   # TODO: themes to support:
   # - tokyo-night
   # - gruvbox

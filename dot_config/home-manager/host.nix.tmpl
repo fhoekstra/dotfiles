@@ -1,7 +1,7 @@
 {{ if eq .chezmoi.osRelease.name "Red Hat Enterprise Linux" }}
-import ./hosts/rhel.nix
+./hosts/rhel.nix
 {{ else if and (eq .chezmoi.osRelease.name "Fedora Linux") (eq .chezmoi.hostname "fedora") }}
-import ./hosts/fedora-laptop.nix
+./hosts/fedora-laptop.nix
 {{ else }}
-import ./hosts/default.nix
+./hosts/default.nix
 {{ end }}

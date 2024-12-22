@@ -1,5 +1,10 @@
 {
-  username = "freek";
-  homeDirectory = "/home/freek";
-  theme = "light";
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  # theme = "light";
+  programs.zsh.initExtra = "";
 }
