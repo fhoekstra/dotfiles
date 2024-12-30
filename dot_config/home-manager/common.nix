@@ -196,9 +196,6 @@
           set -g status-left "#[fg=colour83][#S]" # on the left, session name
           set -g status-right "#[fg=colour80][#H]" # on the right, hostname
           set -g status-justify centre
-
-          setw -g monitor-activity on
-          set -g visual-activity on
         '';
       }
       {
@@ -249,6 +246,7 @@
 
     '';
   };
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
