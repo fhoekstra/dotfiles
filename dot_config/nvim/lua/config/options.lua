@@ -8,5 +8,7 @@ vim.opt.textwidth = 0
 vim.opt.wrapmargin = 0
 vim.opt.linebreak = true -- (optional - breaks by word rather than character)
 
+vim.opt.number = true
+vim.opt.relativenumber = true
 -- set clipboard
 -- vim.opt.clipboard = "unnamedplus"
