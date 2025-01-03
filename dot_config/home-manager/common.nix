@@ -7,8 +7,8 @@
 
 {
 
-  home.username = "freek";
-  home.homeDirectory = "/home/freek";
+  home.username = lib.mkDefault "freek";
+  home.homeDirectory = lib.mkDefault "/home/freek";
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -23,7 +23,6 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    pkgs.lazygit
     pkgs.zsh
     pkgs.tmux
     pkgs.jq # Json query / formatter
@@ -38,6 +37,7 @@
     pkgs.kubernetes-helm
 
     # You got to try this
+    pkgs.lazygit
     pkgs.tldr # Better man packages
     pkgs.eza # Better ls
     pkgs.duf # Better diskspace information: overview

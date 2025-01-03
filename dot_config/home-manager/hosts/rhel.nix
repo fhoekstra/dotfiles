@@ -8,7 +8,7 @@
   home.username = "adm-hoekstrf";
   home.homeDirectory = "/home/adm-hoekstrf";
   # theme = "tokyo-night";
-  extraInit = ''
+  programs.zsh.initExtra = ''
     # Start ssh-agent-switcher if it hasn't been started yet.
     # This program makes sure the SSH Agent is not lost when disconnecting and then later reconnecting to a tmux session.
     if [ ! -e "/tmp/ssh-agent.$USER" ]; then

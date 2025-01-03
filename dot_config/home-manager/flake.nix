@@ -15,9 +15,7 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-      homeConfigurations."freek" = home-manager.lib.homeManagerConfiguration {
+      homeConfig = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
         # Specify your home configuration modules here, for example,
@@ -27,5 +25,9 @@
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
       };
+    in
+    {
+      homeConfigurations."freek" = homeConfig;
+      homeConfigurations."adm-hoekstrf" = homeConfig;
     };
 }
