@@ -6,6 +6,7 @@ return {
       nix = { "nixfmt" },
       ansible = { "prettier" },
       yaml = { "prettier" },
+      json = { "prettier" },
     },
   },
 }
