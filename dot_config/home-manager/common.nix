@@ -283,9 +283,11 @@
 
       # YAML
       yaml-language-server
-
-      # Formatter for YAML and JSON:
+      # Formatter for YAML:
       nodePackages.prettier
+
+      # Formatter for JSON & JS, HTML, etc:
+      biome
     ];
 
     plugins = with pkgs.vimPlugins; [
