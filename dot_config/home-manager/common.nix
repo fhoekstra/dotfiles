@@ -51,6 +51,7 @@
     pkgs.sd # sed, but then easy
     pkgs.ddgr # duck-duck-go...cli style
     pkgs.ripgrep # Better grep
+    pkgs.miller # quick tabular data (csv, json, ...) filtering, ordering, ...
     pkgs.fd # Better find
     pkgs.chezmoi # dotfiles manager
 
