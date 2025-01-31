@@ -2,6 +2,8 @@
 ./hosts/rhel.nix
 {{ else if and (eq .chezmoi.osRelease.name "Fedora Linux") (eq .chezmoi.hostname "fedora") }}
 ./hosts/fedora-laptop.nix
+{{ else if and (eq .chezmoi.osRelease.name "Pop!_OS") (eq .chezmoi.hostname "pop-os") }}
+./hosts/desktop.nix
 {{ else }}
 ./hosts/default.nix
 {{ end }}
