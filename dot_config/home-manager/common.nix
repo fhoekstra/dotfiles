@@ -35,6 +35,7 @@
     pkgs.k9s # kubernetes dashboard
     pkgs.stern # Kubernetes log (combine pod logs)
     pkgs.kubernetes-helm
+    pkgs.sops # Secrets encryption inside YAML
 
     # You got to try this
     pkgs.lazygit
@@ -324,6 +325,7 @@
           nvim-lspconfig
           nvim-notify
           nvim-spectre
+          nvim-sops
           nvim-treesitter
           nvim-treesitter-context
           nvim-treesitter-textobjects
