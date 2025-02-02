@@ -114,6 +114,7 @@
     # Apps
     lg = "lazygit";
     cm = "chezmoi";
+    cmlg = "lazygit --path $(chezmoi data | jq '.chezmoi.sourceDir'| tr -d '\"')";
     ls = "eza";
 
     # My shorthands
