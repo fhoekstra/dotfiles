@@ -326,7 +326,6 @@
           nvim-lspconfig
           nvim-notify
           nvim-spectre
-          nvim-sops
           nvim-treesitter
           nvim-treesitter-context
           nvim-treesitter-textobjects
