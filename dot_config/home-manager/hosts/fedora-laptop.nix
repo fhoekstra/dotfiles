@@ -6,5 +6,8 @@
 }:
 {
   # theme = "light";
-  programs.zsh.initExtra = "";
+  home.packages = [ pkgs.mise ];
+  programs.zsh.initExtra = ''
+    eval "$(/usr/bin/mise activate zsh)"
+  '';
 }
