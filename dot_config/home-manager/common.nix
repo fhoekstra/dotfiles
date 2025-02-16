@@ -38,23 +38,23 @@
     pkgs.sops # Secrets encryption inside YAML
 
     # You got to try this
-    pkgs.lazygit
+    pkgs.lazygit # The best Git GUI is a TUI
     pkgs.tldr # Better man packages
     pkgs.eza # Better ls
     pkgs.duf # Better diskspace information: overview
     pkgs.dust # Better diskspace information: searching the full tree
-    pkgs.bat # The bat is better then cat
+    pkgs.bat # Better cat
     pkgs.delta # Diff, but better
     pkgs.entr # Watch a file, on change: do something
     pkgs.fzf # Fuzzy file finder
-    pkgs.procs # ps, but then better
-    pkgs.btop # even better then procs
-    pkgs.sd # sed, but then easy
+    pkgs.btop # better top
+    pkgs.sd # simpler sed
     pkgs.ddgr # duck-duck-go...cli style
     pkgs.ripgrep # Better grep
     pkgs.miller # quick tabular data (csv, json, ...) filtering, ordering, ...
     pkgs.fd # Better find
     pkgs.chezmoi # dotfiles manager
+    pkgs.nixos-anywhere # Install NixOS remotely on a machine that we have SSH access to
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
