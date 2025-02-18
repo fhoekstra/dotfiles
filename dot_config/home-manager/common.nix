@@ -108,6 +108,13 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # Use nix-direnv to automatically activate flakes for projects
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
   home.shellAliases = {
     update-home = "chezmoi update && home-manager switch && source ~/.zshrc";
     update-nix = "nix flake update --flake ~/\.config/home-manager && home-manager switch";
