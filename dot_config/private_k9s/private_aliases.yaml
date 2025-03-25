@@ -1,0 +1,12 @@
+aliases:
+  dp: deployments
+  sec: v1/secrets
+  jo: jobs
+  cr: clusterroles
+  crb: clusterrolebindings
+  ro: roles
+  rb: rolebindings
+  np: networkpolicies
+  p: v1/pods
+  cluster: postgresql.cnpg.io/v1/clusters
+  cl: postgresql.cnpg.io/v1/clusters
