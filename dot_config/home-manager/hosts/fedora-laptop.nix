@@ -6,8 +6,7 @@
 }:
 {
   # theme = "light";
-  home.packages = [ pkgs.mise ];
   programs.zsh.initExtra = ''
-    eval "$(mise activate zsh)"
+    eval "$(/home/freek/.local/bin/mise activate zsh)"
   '';
 }
