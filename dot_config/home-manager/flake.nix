@@ -28,6 +28,5 @@
     in
     {
       homeConfigurations."freek" = homeConfig;
-      homeConfigurations."adm-hoekstrf" = homeConfig;
     };
 }
