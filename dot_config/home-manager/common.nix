@@ -32,9 +32,11 @@
     pkgs.kubectl # Kubernetes CLI
     pkgs.openshift # OpenShift CLI
     pkgs.kubectl-cnpg # Kubernetes CloudNativePG plugin
+    pkgs.kubectl-view-secret
+    pkgs.kind
     pkgs.k9s # kubernetes dashboard
     pkgs.stern # Kubernetes log (combine pod logs)
-    pkgs.kubernetes-helm
+    (pkgs.wrapHelm pkgs.kubernetes-helm { plugins = [ pkgs.kubernetes-helmPlugins.helm-unittest ]; })
     pkgs.sops # Secrets encryption inside YAML
 
     # You got to try this
