@@ -5,10 +5,6 @@
   ...
 }:
 {
-  home.packages = [
-    pkgs.neovim
-  ];
-  programs.neovim.enable = lib.mkForce false;
   services.home-manager.autoExpire = {
     enable = true;
     timestamp = "-7 days";
