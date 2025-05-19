@@ -1,5 +1,5 @@
-{{ if eq .chezmoi.osRelease.name "Red Hat Enterprise Linux" }}
-./hosts/rhel.nix
+{{ if eq .chezmoi.osRelease.name "AlmaLinux" }}
+./hosts/alma.nix
 {{ else if and (eq .chezmoi.osRelease.name "Fedora Linux") (eq .chezmoi.hostname "fedora") }}
 ./hosts/fedora-laptop.nix
 {{ else if and (eq .chezmoi.osRelease.name "Pop!_OS") (eq .chezmoi.hostname "pop-os") }}
