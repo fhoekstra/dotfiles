@@ -111,6 +111,17 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # Garbage collection
+  services.home-manager.autoExpire = {
+    enable = true;
+    timestamp = "-7 days";
+    frequency = "weekly";
+    store = {
+      cleanup = true;
+      options = "--delete-older-than 30d";
+    };
+  };
+
   # Use nix-direnv to automatically activate flakes for projects
   programs.direnv = {
     enable = true;
