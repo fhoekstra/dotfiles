@@ -27,7 +27,6 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 Finally, install home-manager:
 ```
-nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-nix-channel --update
-nix-shell '<home-manager>' -A install
+nix run home-manager/release-25.05 --no-write-lock-file -- init --switch -b backup
 ```
+Files that were already present (such as `.zshrc`) will get the `.backup` suffix (i.e. you will find your previous zshrc in `~/.zshrc.backup`
