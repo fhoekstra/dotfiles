@@ -2,7 +2,7 @@
 ./hosts/alma.nix
 {{ else if and (eq .chezmoi.osRelease.name "Fedora Linux") (eq .chezmoi.hostname "fedora") }}
 ./hosts/fedora-laptop.nix
-{{ else if and (eq .chezmoi.hostname "cachyos-taintive-v") (eq .chezmoi.hostname "pop-os") }}
+{{ else if or (eq .chezmoi.hostname "cachyos-tantive-v") (eq .chezmoi.hostname "pop-os") }}
 ./hosts/desktop.nix
 {{ else }}
 ./hosts/default.nix
