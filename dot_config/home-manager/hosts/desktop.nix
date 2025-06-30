@@ -6,7 +6,7 @@
 }:
 {
   home.packages = [ pkgs.mise ];
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     eval "$(/usr/bin/mise activate zsh)"
   '';
 }

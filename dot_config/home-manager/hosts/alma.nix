@@ -5,7 +5,7 @@
   ...
 }:
 {
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     # Extra init stuff goes here
   '';
 }

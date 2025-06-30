@@ -176,7 +176,7 @@
         # "yarn"
       ];
     };
-    initExtra = ''
+    initContent = ''
 
       # To add something to the bottom of .zshrc, find this line in ~/.config/home-manager/home.nix
       # And add it below this line in that file.
