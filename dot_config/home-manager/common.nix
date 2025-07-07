@@ -170,6 +170,9 @@ in
   home.shellAliases = {
     update-home = "chezmoi update && home-manager switch && source ~/.zshrc";
     update-nix = "nix flake update --flake ~/\.config/home-manager && home-manager switch";
+    vi = "nvim";
+    vim = "nvim";
+
     # Apps
     lg = "lazygit";
     cm = "chezmoi";
