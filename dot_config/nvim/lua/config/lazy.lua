@@ -18,6 +18,9 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    -- disable mason.nvim, use programs.neovim.extraPackages
+    { "williamboman/mason-lspconfig.nvim", enabled = false },
+    { "williamboman/mason.nvim", enabled = false },
     -- lazyvim plugins
     -- lazyvim extras
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
