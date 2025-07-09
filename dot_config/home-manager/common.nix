@@ -77,6 +77,10 @@ in
     (pkgs.wrapHelm pkgs.kubernetes-helm { plugins = [ pkgs.kubernetes-helmPlugins.helm-unittest ]; })
     pkgs.sops # Secrets encryption inside YAML
 
+    # Databases
+    pkgs.pgcli
+    pkgs.mongosh
+
     # You got to try this
     pkgs.lazygit # The best Git GUI is a TUI
     pkgs.tldr # Better man packages
