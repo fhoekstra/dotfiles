@@ -76,6 +76,7 @@ in
     pkgs.stern # Kubernetes log (combine pod logs)
     (pkgs.wrapHelm pkgs.kubernetes-helm { plugins = [ pkgs.kubernetes-helmPlugins.helm-unittest ]; })
     pkgs.sops # Secrets encryption inside YAML
+    pkgs.age # asymmetric encryption tool, popular for use with sops
 
     # Databases
     pkgs.pgcli
