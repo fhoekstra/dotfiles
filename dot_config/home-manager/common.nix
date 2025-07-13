@@ -81,6 +81,7 @@ in
     # Databases
     pkgs.pgcli
     pkgs.mongosh
+    pkgs.rclone # Cloud storage
 
     # You got to try this
     pkgs.lazygit # The best Git GUI is a TUI
