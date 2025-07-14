@@ -25,6 +25,8 @@ README*
 .config/oh-my-zsh/.*/**/*
 .config/oh-my-zsh/cache/**/*
 
+**/local-secrets.nix
+
 {{ if ne $chassisType "laptop" -}}
 # Kanshi is a tool for dynamically configuring wlr outputs, not needed for desktop
 .config/kanshi
