@@ -177,7 +177,8 @@ in
 
   home.shellAliases = {
     update-home = "chezmoi update && home-manager switch && source ~/.zshrc";
-    update-nix = "nix flake update --flake ~/\.config/home-manager && home-manager switch";
+    update-flake = "nix flake update --flake ~/\.config/home-manager && home-manager switch";
+    update-nix = "sudo -i nix upgrade-nix";
 
     # Apps
     lg = "lazygit";
