@@ -31,5 +31,6 @@ in
   };
   programs.zsh.initContent = ''
     # Extra init stuff goes here
+    PATH="$PATH:/mnt/c/scoop/shims/win32yank.exe"
   '';
 }
