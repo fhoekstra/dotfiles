@@ -10,3 +10,4 @@ aliases:
   p: v1/pods
   cluster: postgresql.cnpg.io/v1/clusters
   cl: postgresql.cnpg.io/v1/clusters
+  rq: resourcequota
