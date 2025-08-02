@@ -11,3 +11,12 @@ vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
   pattern = { "*.j2" },
   command = "set ft=jinja",
 })
+
+-- Do not autoformat keymap files: the keys arrays are spaced out to visually represent the shape of the keyboard
+-- Disable autoformat for keymap.c files
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "keymap.c" },
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
