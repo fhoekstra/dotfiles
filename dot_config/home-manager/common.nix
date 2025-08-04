@@ -103,6 +103,7 @@ in
     pkgs.nixos-anywhere # Install NixOS remotely on a machine that we have SSH access to
     pkgs.go-task # Taskfiles for simple automation
     pkgs.gh-dash
+    pkgs.gh
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
