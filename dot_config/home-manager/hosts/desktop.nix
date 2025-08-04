@@ -8,6 +8,7 @@
   home.packages = [
     pkgs.mise
     pkgs.cosign
+    pkgs.qmk
   ];
   programs.zsh.initContent = ''
     eval "$(mise activate zsh)"
