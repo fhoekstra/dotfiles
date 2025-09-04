@@ -10,5 +10,6 @@ vim.opt.linebreak = true -- (optional - breaks by word rather than character)
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.swapfile = false
 -- set clipboard
 -- vim.opt.clipboard = "unnamedplus"
