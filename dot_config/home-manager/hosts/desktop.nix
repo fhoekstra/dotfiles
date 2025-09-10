@@ -5,6 +5,9 @@
   ...
 }:
 {
+  imports = [
+    ./personal.nix
+  ];
   home.packages = [
     pkgs.mise
     pkgs.cosign
