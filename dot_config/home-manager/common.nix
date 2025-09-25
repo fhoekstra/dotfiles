@@ -83,6 +83,9 @@ in
     pkgs.mongosh
     pkgs.rclone # Cloud storage
 
+    # Site generator
+    pkgs.hugo
+
     # You got to try this
     pkgs.lazygit # The best Git GUI is a TUI
     pkgs.tldr # Better man packages
