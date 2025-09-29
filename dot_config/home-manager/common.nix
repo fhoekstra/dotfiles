@@ -7,6 +7,9 @@
 
 let
   languageServers = with pkgs; [
+    # Tree-sitter dependencies
+    tree-sitter # CLI
+    nodejs_24 # Required for building parsers
     # Nix
     nil
     nixfmt-rfc-style
