@@ -73,8 +73,9 @@ in
     pkgs.kubectl # Kubernetes CLI
     pkgs.openshift # OpenShift CLI
     pkgs.kubectl-cnpg # Kubernetes CloudNativePG plugin
-    pkgs.kubectl-view-secret
-    pkgs.kind
+    pkgs.kubectl-view-secret # Base64 decode secret contents
+    pkgs.pv-migrate # Migrate data from 1 PVC to another
+    pkgs.kind # Run Kubernetes in Docker
     pkgs.k9s # kubernetes dashboard
     pkgs.stern # Kubernetes log (combine pod logs)
     (pkgs.wrapHelm pkgs.kubernetes-helm { plugins = [ pkgs.kubernetes-helmPlugins.helm-unittest ]; })
