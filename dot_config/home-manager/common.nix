@@ -24,8 +24,8 @@ let
     helm-ls
 
     # Ansible
-    ansible-language-server
-    ansible-lint
+    # ansible-language-server
+    # ansible-lint
 
     # Python
     pyright
