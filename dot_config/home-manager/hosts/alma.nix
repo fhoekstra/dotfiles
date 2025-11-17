@@ -24,6 +24,14 @@ in
   home.shellAliases.login2 = secrets.login2;
   home.shellAliases.l1 = secrets.login1;
   home.shellAliases.l2 = secrets.login2;
+
+  home.shellAliases.plogin1 = secrets.loginp1;
+  home.shellAliases.plogin2 = secrets.loginp2;
+  home.shellAliases.loginp1 = secrets.loginp1;
+  home.shellAliases.loginp2 = secrets.loginp2;
+  home.shellAliases.pl1 = secrets.loginp1;
+  home.shellAliases.pl2 = secrets.loginp2;
+
   home.sessionVariables = {
     HTTP_PROXY = secrets.proxy_address;
     HTTPS_PROXY = secrets.proxy_address;
