@@ -7,5 +7,6 @@
 {
   home.packages = [
     pkgs.joplin
+    pkgs.resumed
   ];
 }
