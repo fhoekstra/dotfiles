@@ -67,7 +67,7 @@ in
     pkgs.zsh
     pkgs.tmux
     pkgs.jq # Json query / formatter
-    pkgs.yq # YAML query / formatter
+    pkgs.yq-go # YAML query / formatter, v4 is yq-go, v3 is yq
 
     # Kubernetes
     pkgs.kubectl # Kubernetes CLI
