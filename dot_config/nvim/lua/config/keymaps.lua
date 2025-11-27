@@ -3,3 +3,10 @@
 -- Add any additional keymaps here
 
 local map = vim.keymap.set
+local del = vim.keymap.del
+
+del("n", "<leader>l")
+map("n", "<leader>lz", "<cmd>Lazy<cr>", { desc = "Lazy" })
+map("n", "<leader>lg", function()
+  Snacks.lazygit({ cwd = LazyVim.root.git() })
+end, { desc = "Lazygit (Root Dir)" })
