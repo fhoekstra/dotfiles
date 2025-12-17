@@ -79,6 +79,7 @@ in
     pkgs.k9s # kubernetes dashboard
     pkgs.stern # Kubernetes log (combine pod logs)
     (pkgs.wrapHelm pkgs.kubernetes-helm { plugins = [ pkgs.kubernetes-helmPlugins.helm-unittest ]; })
+    pkgs.dive # Explore layers of a Docker image
     pkgs.sops # Secrets encryption inside YAML
     pkgs.age # asymmetric encryption tool, popular for use with sops
 
