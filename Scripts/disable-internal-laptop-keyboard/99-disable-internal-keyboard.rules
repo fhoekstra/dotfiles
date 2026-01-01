@@ -1,0 +1,2 @@
+SUBSYSTEM=="usb", ACTION=="add", ENV{DEVTYPE}=="usb_device", ENV{PRODUCT}=="a8f8/1836/200", RUN+="/home/freek/Scripts/disable-internal-laptop-keyboard/laptop-kb.sh disable"
+SUBSYSTEM=="usb", ACTION=="remove", ENV{DEVTYPE}=="usb_device", ENV{PRODUCT}=="a8f8/1836/200", RUN+="/home/freek/Scripts/disable-internal-laptop-keyboard/laptop-kb.sh enable"
