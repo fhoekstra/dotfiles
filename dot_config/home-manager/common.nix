@@ -217,6 +217,7 @@ in
       plugins = [
         # Basics
         "git"
+        "git-lfs"
         "history"
         "dotenv"
 
@@ -248,6 +249,11 @@ in
       PS1="$(draw_cond_box)$PS1"
 
     '';
+  };
+
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
   };
 
   programs.tmux = {
