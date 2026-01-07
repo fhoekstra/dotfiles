@@ -66,6 +66,8 @@ in
   home.packages = languageServers ++ [
     pkgs.zsh
     pkgs.tmux
+    pkgs.helix # Kind of like vim, but not backwards compatible at all and with great defaults
+
     pkgs.jq # Json query / formatter
     pkgs.yq-go # YAML query / formatter, v4 is yq-go, v3 is yq
 
