@@ -13,6 +13,10 @@ select = "underline"
 [editor.indent-guides]
 render = true
 
+[keys.normal]
+C-s = ":w"
+
+# Git
 [keys.normal.space.g]
 g = [
     ":write-all",
@@ -24,3 +28,11 @@ g = [
     ":redraw",
     ":reload-all"
 ]
+f = "changed_file_picker"
+r = ":reset-diff-change"
+# inline blame
+b = ":run-shell-command ~/.config/helix/utils/blame_line_pretty.sh %{buffer_name} %{cursor_line}"
+# full file changes of last commit under cursor
+B = ':open %sh{~/.config/helix/utils/blame_file_pretty.sh %{buffer_name} %{cursor_line}}'
+# inline hunk changes
+h = ':run-shell-command ~/.config/helix/utils/git-hunk.sh %{buffer_name} %{cursor_line} 3'
