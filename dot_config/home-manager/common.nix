@@ -43,6 +43,7 @@ let
 
     # Markdown
     marksman
+    mdformat
 
     # Formatter for YAML:
     nodePackages.prettier

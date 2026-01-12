@@ -9,3 +9,7 @@ typeCheckingMode = "basic"
 [language-server.ruff]
 command = "ruff"
 args = ["server"]
+
+[[language]]
+name = "markdown"
+formatter = { command = "mdformat", args = ["-"] }
