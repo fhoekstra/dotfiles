@@ -30,6 +30,7 @@ let
     # Python
     pyright
     ruff
+    ty
 
     # Docker
     hadolint
@@ -39,9 +40,12 @@ let
 
     # YAML
     yaml-language-server
+
+    # Markdown
+    marksman
+
     # Formatter for YAML:
     nodePackages.prettier
-
     # Formatter for JSON & JS, HTML, etc:
     biome
   ];
