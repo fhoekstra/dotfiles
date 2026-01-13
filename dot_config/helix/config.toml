@@ -7,7 +7,7 @@ color-modes = true
 
 [editor.cursor-shape]
 insert = "underline"
-normal = "underline"
+normal = "block"
 select = "underline"
 
 [editor.indent-guides]
