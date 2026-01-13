@@ -15,6 +15,10 @@ render = true
 
 [keys.normal]
 C-s = ":w"
+X = "extend_line_above"
+
+[keys.select]
+X = "extend_line_above"
 
 # Git
 [keys.normal.space.g]
