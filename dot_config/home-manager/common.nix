@@ -95,8 +95,9 @@ in
     pkgs.mongosh
     pkgs.rclone # Cloud storage
 
-    # Site generator
-    pkgs.hugo
+    # Rendering Markdown
+    pkgs.hugo # Static site generator: MD -> HTML
+    pkgs.mermaid-cli # Diagram rendering: Diagram to image (SVG, PNG, etc)
 
     # You got to try this
     pkgs.lazygit # The best Git GUI is a TUI
