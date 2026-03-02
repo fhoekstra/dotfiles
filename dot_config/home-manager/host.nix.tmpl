@@ -1,6 +1,6 @@
-{{ if eq .chezmoi.osRelease.name "AlmaLinux" }}
-./hosts/alma.nix
-{{ else if and (eq .chezmoi.osRelease.name "Fedora Linux") (eq .chezmoi.hostname "fedora") }}
+{{- $osr := .chezmoi.osRelease -}}
+{{- if and (eq .chezmoi.os "linux") $osr (hasKey $osr "name") (eq (index $osr "name") "AlmaLinux") -}}./hosts/alma.nix
+{{ else if and $osr (hasKey $osr "name") (eq $osr.name "Fedora Linux") (eq .chezmoi.hostname "fedora") }}
 ./hosts/fedora-laptop.nix
 {{ else if or (eq .chezmoi.hostname "cachyos-tantive-v") (eq .chezmoi.hostname "pop-os") }}
 ./hosts/desktop.nix
