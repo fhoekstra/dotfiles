@@ -13,20 +13,23 @@
   outputs =
     { nixpkgs, home-manager, ... }:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-      homeConfig = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      # Define home configurations for each architecture
+      configurations = {
+        x86_64-linux = home-manager.lib.homeManagerConfiguration {
+          inherit (nixpkgs.legacyPackages.x86_64-linux) pkgs;
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./home.nix ];
+          modules = [ ./home.nix ];
+        };
+        aarch64-darwin = home-manager.lib.homeManagerConfiguration {
+          inherit (nixpkgs.legacyPackages.aarch64-darwin) pkgs;
 
-        # Optionally use extraSpecialArgs
-        # to pass through arguments to home.nix
+          modules = [ ./home.nix ];
+        };
       };
     in
     {
-      homeConfigurations."freek" = homeConfig;
+      # Specify the home configurations for both architecture types
+      homeConfigurations."freek" = configurations.x86_64-linux;
+      homeConfigurations."freekhoekstra" = configurations.aarch64-darwin;
     };
 }
