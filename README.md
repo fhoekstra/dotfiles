@@ -13,7 +13,7 @@ Some of the tools I manage with these config files are:
 
 ## Install
 
-Make sure you have `git` installled.
+Make sure you have `git` and `curl` installled.
 Then install chezmoi, pull and apply the latest version of these dotfiles with a single command:
 ```
 GITHUB_USERNAME=fhoekstra
@@ -27,6 +27,6 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 Finally, install home-manager:
 ```
-nix run home-manager/release-25.05 --no-write-lock-file -- init --switch -b backup
+nix run home-manager/release-25.11 --no-write-lock-file -- init --switch -b backup
 ```
 Files that were already present (such as `.zshrc`) will get the `.backup` suffix (i.e. you will find your previous zshrc in `~/.zshrc.backup`
