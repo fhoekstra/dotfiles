@@ -1,0 +1,7 @@
+
+Host *
+  # Make sure to run: ssh-add --apple-use-keychain ~/.ssh/[your-private-key]
+  # and use the Apple-supplied /usr/bin/ssh-add for it to add your private key passphrase to your keychain
+  UseKeyChain yes
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_ed25519

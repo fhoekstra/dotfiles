@@ -1,0 +1,3 @@
+{{- if and (ne .chezmoi.os "darwin") (ne .chezmoi.arch "arm64") -}}
+config
+{{- end -}}
