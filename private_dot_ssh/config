@@ -5,3 +5,9 @@ Host *
   UseKeyChain yes
   AddKeysToAgent yes
   IdentityFile ~/.ssh/id_ed25519
+
+Host *.azure.com
+Host azure.com
+  UseKeyChain yes
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_rsa
