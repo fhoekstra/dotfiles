@@ -209,6 +209,7 @@ in
     lg = "lazygit";
     cm = "chezmoi";
     cmlg = "lazygit --path $(chezmoi data | jq '.chezmoi.sourceDir'| tr -d '\"')";
+    cmcd = "cm cd";
     ls = "eza";
 
     # My shorthands
