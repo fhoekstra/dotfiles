@@ -7,9 +7,11 @@
 
 let
   languageServers = with pkgs; [
+
     # Tree-sitter dependencies
     tree-sitter # CLI
     nodejs_24 # Required for building parsers
+
     # Nix
     nil
     nixfmt-rfc-style
@@ -20,26 +22,27 @@ let
     # Telescope
     ripgrep
 
-    # Helm
-    helm-ls
-
-    # Ansible
-    # ansible-language-server
-    # ansible-lint
-
     # Python
     pyright
     ruff
     ty
 
-    # Docker
-    hadolint
+    # Shell
+    shfmt
 
     # SQL
     sqlfluff
 
+    # Docker
+    dockerfile-language-server
+    hadolint
+
     # YAML
     yaml-language-server
+    helm-ls
+    docker-compose-language-service
+    # ansible-language-server
+    # ansible-lint
 
     # Markdown
     marksman
@@ -47,8 +50,12 @@ let
 
     # Formatter for YAML:
     nodePackages.prettier
-    # Formatter for JSON & JS, HTML, etc:
+
+    # Typescript:
     biome
+    vscode-js-debug
+    vtsls
+    vscode-langservers-extracted
   ];
 in
 {
