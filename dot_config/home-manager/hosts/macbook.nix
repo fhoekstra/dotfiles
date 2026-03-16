@@ -6,6 +6,7 @@
 }:
 let
   username = "freekhoekstra";
+  homeDir = "/Users/${username}";
 in
 {
   home.packages = [
@@ -14,7 +15,9 @@ in
     pkgs.kubelogin # Azure Kubernetes login
   ];
   home.username = username;
-  home.homeDirectory = "/Users/${username}";
+  home.homeDirectory = homeDir;
+
+  home.sessionVariables.K9S_CONFIG_DIR = "${homeDir}/.config/k9s";
 
   programs.zsh.initContent = ''
     ssh-add --apple-load-keychain -q
