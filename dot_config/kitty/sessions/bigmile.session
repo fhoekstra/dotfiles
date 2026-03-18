@@ -1,0 +1,12 @@
+# Set the layout for the current tab
+layout tall
+# Set the working directory for windows in the current tab
+cd ~/Source/BigMile3/
+# Create the "main" window and run an editor in it to edit the project files
+launch --title "App" nvim
+new_tab k9s
+cd ~/Source/BigMile3/
+launch
+new_tab infra
+cd ~/Source/k8s-clusters/
+launch nvim
