@@ -270,6 +270,9 @@ in
   programs.git = {
     enable = true;
     lfs.enable = true;
+    settings = {
+      fetch.prune = true;
+    };
   };
 
   programs.tmux = {
