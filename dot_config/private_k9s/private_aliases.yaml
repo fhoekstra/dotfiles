@@ -10,5 +10,5 @@ aliases:
   p: v1/pods
   cluster: postgresql.cnpg.io/v1/clusters
   pcl: postgresql.cnpg.io/v1/clusters
-  ccl: ceph.rook.io/v1/CephClusters
+  ccl: CephCluster
   rq: resourcequota
