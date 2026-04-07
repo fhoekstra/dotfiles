@@ -49,7 +49,7 @@ let
     mdformat
 
     # Formatter for YAML:
-    nodePackages.prettier
+    prettier
 
     # Typescript:
     biome
