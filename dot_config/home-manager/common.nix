@@ -274,6 +274,7 @@ in
     enable = true;
     lfs.enable = true;
     settings = {
+      rerere.enabled = true;
       fetch.prune = true;
     };
   };
