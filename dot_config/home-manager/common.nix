@@ -82,6 +82,7 @@ in
 
     pkgs.jq # Json query / formatter
     pkgs.yq-go # YAML query / formatter, v4 is yq-go, v3 is yq
+    pkgs.json-diff
 
     # Kubernetes
     pkgs.kubectl # Kubernetes CLI
