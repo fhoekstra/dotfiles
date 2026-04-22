@@ -1,6 +1,5 @@
-local util = require("conform.util")
-local ts_js_css_html_formatters = { "biome", "biome_fix", "biome-organize-imports" }
-local yaml_formatters = { "prettier" }
+local ts_js_css_html_formatters = { "oxfmt" }
+local yaml_formatters = { "oxfmt" }
 return {
   "stevearc/conform.nvim",
   optional = true,
@@ -17,15 +16,6 @@ return {
       typescriptreact = ts_js_css_html_formatters,
       html = ts_js_css_html_formatters,
       css = ts_js_css_html_formatters,
-    },
-    formatters = {
-      biome_fix = {
-        command = "node_modules/.bin/biome",
-        args = { "check", "--write", "--stdin-file-path", "$FILENAME" },
-        stdin = true,
-        cwd = util.root_file({ "biome.json", "biome.jsonc" }),
-        require_cwd = true,
-      },
     },
   },
 }

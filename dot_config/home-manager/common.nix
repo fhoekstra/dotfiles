@@ -49,10 +49,9 @@ let
     mdformat
 
     # Formatter for YAML:
-    prettier
+    oxfmt
 
     # Typescript:
-    biome
     vscode-js-debug
     vtsls
     vscode-langservers-extracted
