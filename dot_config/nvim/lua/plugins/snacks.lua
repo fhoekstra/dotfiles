@@ -5,11 +5,23 @@ return {
       picker = {
         sources = {
           files = {
-            hidden = true, -- for hidden files
+            hidden = true,
+            -- ignored = true,
+          },
+          grep = {
+            hidden = true,
+            -- ignored = true,
           },
         },
-        hidden = true, -- for hidden files
-        ignored = true, -- for .gitignore files
+        -- optionally remap toggles to Ctrl-based keys:
+        win = {
+          input = {
+            keys = {
+              ["<C-y>"] = { "toggle_ignored", mode = { "i", "n" } },
+              ["<C-.>"] = { "toggle_hidden", mode = { "i", "n" } },
+            },
+          },
+        },
       },
     },
   },
