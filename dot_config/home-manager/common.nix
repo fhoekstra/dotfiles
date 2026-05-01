@@ -98,7 +98,6 @@ in
     pkgs.age # asymmetric encryption tool, popular for use with sops
 
     # Databases
-    pkgs.pgcli
     pkgs.postgresql_18 # Includes pg_dump, pg_restore, etc
     pkgs.mongosh
     pkgs.rclone # Cloud storage
