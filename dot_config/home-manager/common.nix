@@ -218,7 +218,6 @@ in
     # My shorthands
     urldecode = "python -c 'import sys; from urllib.parse import unquote; print(unquote(sys.stdin.read()))'";
     urlencode = "python -c 'import sys; from urllib.parse import quote; print(quote(sys.stdin.read()))'";
-    git-clean = "CURRENT_BRANCH=$(git rev-parse --abrev-ref HEAD) && git checkout main && git pull --prune && git branch -d \"$CURRENT_BRANCH\" ";
   };
 
   programs.zsh = {
@@ -268,15 +267,6 @@ in
       PS1="$(draw_cond_box)$PS1"
 
     '';
-  };
-
-  programs.git = {
-    enable = true;
-    lfs.enable = true;
-    settings = {
-      rerere.enabled = true;
-      fetch.prune = true;
-    };
   };
 
   programs.tmux = {
