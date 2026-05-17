@@ -7,8 +7,9 @@ aliases:
   ro: roles
   rb: rolebindings
   np: networkpolicies
+  rq: resourcequota
   p: v1/pods
+  svcmon: servicemonitors
   cluster: postgresql.cnpg.io/v1/clusters
   pcl: postgresql.cnpg.io/v1/clusters
   ccl: CephCluster
-  rq: resourcequota
