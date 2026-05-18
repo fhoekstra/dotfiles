@@ -6,7 +6,9 @@ font-family = "JetBrainsMono Nerd Font Mono"
 font-size = 15
 
 # ── Appearance ────────────────────────────────────────────────────────────────
-background-opacity = 0.87
+# theme = "Flexoki Dark"
+theme = flexoki-darker
+background-opacity = 1
 background-blur-radius = 16
 
 # Disable ligatures (kitty: disable_ligatures always)
