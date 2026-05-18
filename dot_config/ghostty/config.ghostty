@@ -102,3 +102,6 @@ keybind = ctrl+shift+f6=inspector:toggle
 # Customizations
 
 font-size = 15
+
+# Include:
+config-file = ?~/.config/ghostty/local.conf
