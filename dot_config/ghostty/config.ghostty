@@ -3,7 +3,7 @@
 
 # ── Font ──────────────────────────────────────────────────────────────────────
 font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 15
+font-size = 12
 
 # ── Appearance ────────────────────────────────────────────────────────────────
 # theme = "Flexoki Dark"
@@ -81,9 +81,9 @@ keybind = ctrl+shift+period=move_tab:1
 keybind = ctrl+shift+comma=move_tab:-1
 
 # ── Font sizes ────────────────────────────────────────────────────────────────
-keybind = ctrl+shift+equal=increase_font_size:2
-keybind = ctrl+shift+plus=increase_font_size:2
-keybind = ctrl+shift+minus=decrease_font_size:2
+keybind = ctrl+shift+equal=increase_font_size:1
+keybind = ctrl+shift+plus=increase_font_size:1
+keybind = ctrl+shift+minus=decrease_font_size:1
 keybind = ctrl+shift+backspace=reset_font_size
 
 # ── Miscellaneous ─────────────────────────────────────────────────────────────
@@ -98,12 +98,6 @@ keybind = ctrl+shift+f2=open_config
 
 # Inspector / debug (kitty: debug_config)
 keybind = ctrl+shift+f6=inspector:toggle
-
-# Quick terminal (no direct kitty equivalent mapped, skip)
-
-# Customizations
-
-font-size = 15
 
 # Include:
 config-file = ?~/.config/ghostty/local.conf
