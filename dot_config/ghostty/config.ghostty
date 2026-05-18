@@ -48,6 +48,12 @@ keybind = ctrl+shift+end=scroll_to_bottom
 # New split/window with cwd (kitty: new_window_with_cwd)
 keybind = ctrl+shift+enter=new_split:right
 
+# New splits: u/d/l/r
+keybind = ctrl+shift+u=new_split:up
+keybind = ctrl+shift+d=new_split:down
+keybind = ctrl+shift+l=new_split:left
+keybind = ctrl+shift+r=new_split:right
+
 # Close window/pane
 keybind = ctrl+shift+w=close_surface
 
@@ -55,8 +61,8 @@ keybind = ctrl+shift+w=close_surface
 keybind = ctrl+shift+]=goto_split:next
 keybind = ctrl+shift+[=goto_split:previous
 
-# Resize mode (kitty: start_resizing_window — Ghostty uses resize_split)
-keybind = ctrl+shift+r=resize_split:right,10
+# Temporarily set one pane/split to fullscreen
+keybind = ctrl+shift+z=toggle_split_zoom
 
 # New OS window (kitty: new_os_window)
 keybind = ctrl+shift+n=new_window
