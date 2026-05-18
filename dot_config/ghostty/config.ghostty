@@ -1,0 +1,104 @@
+# Ghostty config mirroring kitty setup
+# kitty_mod = ctrl+shift (the default), used throughout
+
+# ── Font ──────────────────────────────────────────────────────────────────────
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 15
+
+# ── Appearance ────────────────────────────────────────────────────────────────
+background-opacity = 0.87
+background-blur-radius = 16
+
+# Disable ligatures (kitty: disable_ligatures always)
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+# ── Bell ──────────────────────────────────────────────────────────────────────
+bell-features = no-audio
+
+# ── Window close confirmation ─────────────────────────────────────────────────
+# kitty: confirm_os_window_close 2 (linux), 0 (mac)
+# Ghostty has no per-platform conditional; set to false to match mac.conf=0.
+# On Linux you may want to change this to true.
+confirm-close-surface = false
+
+# ── Scrollback ────────────────────────────────────────────────────────────────
+scrollback-limit = 10000000
+
+# ── Clipboard ─────────────────────────────────────────────────────────────────
+# ctrl+shift+c / ctrl+shift+v are Ghostty defaults for copy/paste;
+# explicitly declared here for clarity and to match kitty behaviour.
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+
+# ── Scrolling ─────────────────────────────────────────────────────────────────
+keybind = ctrl+shift+up=scroll_page_lines:-1
+keybind = ctrl+shift+k=scroll_page_lines:-1
+keybind = ctrl+shift+down=scroll_page_lines:1
+keybind = ctrl+shift+j=scroll_page_lines:1
+keybind = ctrl+shift+page_up=scroll_page_up
+keybind = ctrl+shift+page_down=scroll_page_down
+keybind = ctrl+shift+home=scroll_to_top
+keybind = ctrl+shift+end=scroll_to_bottom
+
+# ── Window management ─────────────────────────────────────────────────────────
+# New split/window with cwd (kitty: new_window_with_cwd)
+keybind = ctrl+shift+enter=new_split:right
+
+# Close window/pane
+keybind = ctrl+shift+w=close_surface
+
+# Navigate splits (kitty: next_window / previous_window)
+keybind = ctrl+shift+]=goto_split:next
+keybind = ctrl+shift+[=goto_split:previous
+
+# Resize mode (kitty: start_resizing_window — Ghostty uses resize_split)
+keybind = ctrl+shift+r=resize_split:right,10
+
+# New OS window (kitty: new_os_window)
+keybind = ctrl+shift+n=new_window
+
+# Focus splits by index — Ghostty doesn't support nth-split by index natively;
+# these are the closest approximations using goto_split directions.
+# (kitty ctrl+shift+1..9 → first_window..ninth_window have no direct equivalent)
+
+# ── Tab management ────────────────────────────────────────────────────────────
+# New tab with cwd (kitty: new_tab_with_cwd !neighbor)
+keybind = ctrl+shift+t=new_tab
+
+# Close tab
+keybind = ctrl+shift+q=close_tab
+
+# Navigate tabs
+keybind = ctrl+shift+right=next_tab
+keybind = ctrl+shift+left=previous_tab
+
+# Move tab forward/backward (kitty: move_tab_forward / move_tab_backward)
+keybind = ctrl+shift+period=move_tab:1
+keybind = ctrl+shift+comma=move_tab:-1
+
+# ── Font sizes ────────────────────────────────────────────────────────────────
+keybind = ctrl+shift+equal=increase_font_size:2
+keybind = ctrl+shift+plus=increase_font_size:2
+keybind = ctrl+shift+minus=decrease_font_size:2
+keybind = ctrl+shift+backspace=reset_font_size
+
+# ── Miscellaneous ─────────────────────────────────────────────────────────────
+# Toggle fullscreen (kitty: toggle_fullscreen)
+keybind = ctrl+shift+f11=toggle_fullscreen
+
+# Reload config (kitty: load_config_file)
+keybind = ctrl+shift+f5=reload_config
+
+# Open config file (kitty: edit_config_file)
+keybind = ctrl+shift+f2=open_config
+
+# Inspector / debug (kitty: debug_config)
+keybind = ctrl+shift+f6=inspector:toggle
+
+# Quick terminal (no direct kitty equivalent mapped, skip)
+
+# Customizations
+
+font-size = 15
