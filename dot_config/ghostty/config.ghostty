@@ -16,14 +16,10 @@ font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
 
+cursor-style = block
+cursor-blink = true
 # ── Bell ──────────────────────────────────────────────────────────────────────
 bell-features = no-audio
-
-# ── Window close confirmation ─────────────────────────────────────────────────
-# kitty: confirm_os_window_close 2 (linux), 0 (mac)
-# Ghostty has no per-platform conditional; set to false to match mac.conf=0.
-# On Linux you may want to change this to true.
-confirm-close-surface = false
 
 # ── Scrollback ────────────────────────────────────────────────────────────────
 scrollback-limit = 10000000
