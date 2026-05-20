@@ -1,0 +1,3 @@
+{{- if or (ne .chezmoi.os "darwin") (ne .chezmoi.arch "arm64") (not (hasPrefix "MW-KH" .chezmoi.fqdnHostname)) -}}
+mac_work
+{{- end -}}
