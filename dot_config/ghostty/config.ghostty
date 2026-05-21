@@ -17,7 +17,7 @@ font-feature = -liga
 font-feature = -dlig
 
 cursor-style = block
-cursor-blink = true
+cursor-style-blink = true
 # ── Bell ──────────────────────────────────────────────────────────────────────
 bell-features = no-audio
 
