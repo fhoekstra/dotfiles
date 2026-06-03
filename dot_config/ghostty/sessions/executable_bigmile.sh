@@ -21,8 +21,7 @@ GHOSTTY_APP="Ghostty"
 
 # Helper: open a new tab and run a command in it
 _new_tab() {
-  local title="$1"
-  local dir="$2"
+  local dir="$1"
 
   # Send Ctrl+Shift+T to open a new tab (matches keybind in config.ghostty)
   osascript -e "
@@ -33,24 +32,31 @@ _new_tab() {
   "
   sleep 0.3
 
-  # cd into directory and set the tab title via the shell title escape
+  # cd into directory
   osascript -e "
     tell application \"System Events\"
-      keystroke \"cd $dir && printf '\\\\e]2;$title\\\\a'\" & return
+      keystroke \"cd $dir \" & return
     end tell
   "
   sleep 0.1
+
+  # Clear the new tab (Ctrl+L) so it's clean
+  osascript -e "
+    tell application \"System Events\"
+      keystroke \"l\" using {control down}
+    end tell
+  "
+  sleep 0.05
 }
 
 # ── Tab 1: App (current tab, just cd) ─────────────────────────────────────────
 cd ~/Source/BigMile3/ || true
-printf '\e]2;App\a'
 
 # ── Tab 2: k9s ────────────────────────────────────────────────────────────────
-_new_tab "k9s" "~/Source/BigMile3/"
+_new_tab "~/Source/BigMile3/"
 
 # ── Tab 3: infra ──────────────────────────────────────────────────────────────
-_new_tab "infra" "~/Source/k8s-clusters/"
+_new_tab "~/Source/k8s-clusters/"
 
 # ── Return focus to tab 1 ─────────────────────────────────────────────────────
 # Send Ctrl+Shift+Left twice to cycle back to the first tab
