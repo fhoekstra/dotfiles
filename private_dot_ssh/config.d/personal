@@ -1,0 +1,15 @@
+Host home-assistant
+  # HostName homeassistant.local
+  HostName 192.168.1.78
+  Port 2222
+  User hassio
+
+Host nfs-pi
+  HostName 192.168.1.49
+  User freek
+
+Host dns-pi
+  HostName 192.168.1.53
+  HostName raspberry-pi-2b.local
+  User pi
+
