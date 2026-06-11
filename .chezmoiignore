@@ -31,3 +31,8 @@ README*
 # Kanshi is a tool for dynamically configuring wlr outputs, not needed for desktop
 .config/kanshi
 {{- end }}
+
+{{ if ne .chezmoi.os "darwin" -}}
+# macOS-only symlinks pointing lazygit (and others) from ~/Library to ~/.config
+Library
+{{- end }}
