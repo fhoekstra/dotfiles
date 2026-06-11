@@ -1,0 +1,10 @@
+customCommands:
+  - key: '<c-a>'
+    context: 'files'
+    description: 'Amend and force push'
+    loadingText: 'Amending and force pushing...'
+    prompts:
+      - type: 'confirm'
+        title: 'Amend + force push'
+        body: 'Amend HEAD with staged changes and force-with-lease push?'
+    command: 'git commit --amend --no-edit && git push --force-with-lease'
