@@ -1,4 +1,53 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "autoupdate": false
+  "autoupdate": false,
+  "lsp": true,
+  "provider": {
+    "cortecs": {
+      "models": {
+        "minimax-m3": {
+          "cost": {
+            "input": 0.355,
+            "output": 1.775
+          }
+        },
+        "kimi-k2.7-code": {
+          "cost": {
+            "input": 1.109,
+            "output": 3.993
+          }
+        },
+        "glm-5.2": {
+          "cost": {
+            "input": 1.242,
+            "output": 3.905
+          }
+        },
+        "qwen3.5-9b": {
+          "cost": {
+            "input": 0.1,
+            "output": 0.15
+          }
+        },
+        "qwen3.5-397b-a17b": {
+          "cost": {
+            "input": 0.6,
+            "output": 3.6
+          }
+        },
+        "qwen3.6-35b-a3b": {
+          "cost": {
+            "input": 0.25,
+            "output": 1.5
+          }
+        },
+        "qwen3.6-27b": {
+          "cost": {
+            "input": 0.4,
+            "output": 2.7
+          }
+        }
+      }
+    }
+  }
 }
