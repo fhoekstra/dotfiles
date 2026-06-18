@@ -1,0 +1,82 @@
+tap "netbirdio/tap", trusted: true
+
+# IaC
+tap "hashicorp/tap"
+tap "pulumi/tap"
+
+# Bring your existing Azure resources under the management of Terraform
+brew "aztfexport"
+
+# Dig into ClickHouse with TUI interface
+brew "chdig"
+
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
+# Distributed revision control system
+brew "git"
+# Library for communicating with USB and Bluetooth HID devices
+brew "hidapi"
+# OpenID Connect authentication plugin for kubectl
+brew "kubelogin"
+# Library for USB device access
+brew "libusb"
+# Utility for directing compilation
+brew "make"
+# Manage multiple Node.js versions
+brew "nvm"
+# User interface to the TELNET protocol
+brew "telnet"
+# JavaScript package manager
+brew "yarn"
+# Netbird project.
+brew "netbirdio/tap/netbird", trusted: true
+# Cross platform SQL editor and database management app
+cask "beekeeper-studio"
+# Column-oriented database management system
+cask "clickhouse"
+# Universal database tool and SQL client
+cask "dbeaver-community"
+# All-in-one toolbox for developers
+cask "devutils"
+# Web browser
+cask "firefox"
+cask "font-caskaydia-cove-nerd-font"
+cask "font-fira-code-nerd-font"
+cask "font-fira-mono-nerd-font"
+cask "font-inconsolata-go-nerd-font"
+cask "font-inconsolata-lgc-nerd-font"
+cask "font-inconsolata-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-liberation-nerd-font"
+cask "font-mononoki-nerd-font"
+cask "font-noto-nerd-font"
+cask "font-overpass-nerd-font"
+cask "font-ubuntu-mono-nerd-font"
+cask "font-ubuntu-nerd-font"
+
+# (Mac only) Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+
+# Keyboard customiser
+cask "karabiner-elements"
+
+# Password manager application and digital vault
+cask "keeper-password-manager"
+
+# Full TeX Live distribution with GUI applications
+cask "mactex"
+
+# Open-source code editor
+cask "visual-studio-code"
+vscode "anweber.vscode-httpyac"
+vscode "github.copilot-chat"
+vscode "ms-azuretools.vscode-azurefunctions"
+vscode "ms-azuretools.vscode-azureresourcegroups"
+vscode "oxc.oxc-vscode"
+vscode "redhat.vscode-yaml"

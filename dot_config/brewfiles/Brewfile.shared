@@ -1,0 +1,42 @@
+
+tap "fluxcd/tap"
+tap "home-operations/tap"
+
+brew "home-operations/tap/flate"
+brew kubectl
+brew helm
+
+
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+
+#### Formatters and Language Servers
+
+# Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
+brew "clang-format"
+# High-performance linter for JavaScript and TypeScript written in Rust
+brew "oxlint"
+# OpenTofu Language Server
+brew "tofu-ls"
+
+
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Convert text between DOS, UNIX, and Mac formats
+brew "dos2unix"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# CLI for Postgres with auto-completion and syntax highlighting
+brew "pgcli"
+# Modern watch command
+brew "viddy"
+
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
+
+# AI coding agent, built for the terminal
+brew "opencode"
+
