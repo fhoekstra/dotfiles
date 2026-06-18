@@ -1,0 +1,12 @@
+# Shared packages (all machines)
+include_file "{{ .chezmoi.configHomeDir }}/brewfiles/Brewfile.shared"
+
+{{ if eq .machine_type "personal" -}}
+# Personal machine packages
+include_file "{{ .chezmoi.configHomeDir }}/brewfiles/Brewfile.personal"
+{{- end }}
+
+{{ if eq .machine_type "work" -}}
+# Work machine packages
+include_file "{{ .chezmoi.configHomeDir }}/brewfiles/Brewfile.work"
+{{- end }}
