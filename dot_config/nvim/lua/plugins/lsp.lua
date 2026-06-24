@@ -54,6 +54,30 @@ return {
             },
           },
         },
+        on_attach = function(client, bufnr)
+          -- organize imports synchronously on save
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = bufnr,
+            callback = function()
+              local uri = vim.uri_from_bufnr(bufnr)
+              local result = vim.lsp.buf_request_sync(bufnr, "workspace/executeCommand", {
+                command = "_typescript.organizeImports",
+                arguments = { uri },
+              }, 5000)
+              if result and result[1] and result[1].result and result[1].result.body then
+                local new_lines = vim.split(result[1].result.body, "\n")
+                vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, new_lines)
+              end
+            end,
+          })
+          -- add missing imports asynchronously on save (may require a second save to persist)
+          vim.api.nvim_create_autocmd("BufWritePost", {
+            buffer = bufnr,
+            callback = function()
+              pcall(LazyVim.lsp.action["source.addMissingImports.ts"])
+            end,
+          })
+        end,
         keys = {
           {
             "gD",
