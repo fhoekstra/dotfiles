@@ -16,6 +16,7 @@ return {
       typescriptreact = ts_js_css_html_formatters,
       html = ts_js_css_html_formatters,
       css = ts_js_css_html_formatters,
+      json5 = yaml_formatters,
     },
   },
 }
