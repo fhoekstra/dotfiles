@@ -103,3 +103,7 @@ keybind = ctrl+shift+f6=inspector:toggle
 
 # Include:
 config-file = ?~/.config/ghostty/local.conf
+
+# Window and title bar
+gtk-tabs-location = bottom
+gtk-wide-tabs = false
