@@ -9,6 +9,7 @@ aliases:
   np: networkpolicies
   rq: resourcequota
   p: v1/pods
+  cj: cronjobs
   svcmon: servicemonitors
   cluster: postgresql.cnpg.io/v1/clusters
   pcl: postgresql.cnpg.io/v1/clusters
