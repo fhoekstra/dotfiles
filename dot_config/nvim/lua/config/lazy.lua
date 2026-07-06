@@ -18,7 +18,7 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    -- disable mason.nvim, use programs.neovim.extraPackages
+    -- disable mason.nvim, use a real package manager to install language servers and formatters
     { "mason-org/mason-lspconfig.nvim", enabled = false },
     { "mason-org/mason.nvim", enabled = false },
     -- lazyvim plugins
@@ -28,8 +28,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.chezmoi" },
     { import = "lazyvim.plugins.extras.lang.nix" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.typescript.oxc" },
     { import = "lazyvim.plugins.extras.lang.python" },
+    { import = "lazyvim.plugins.extras.lang.rust" },
     { import = "lazyvim.plugins.extras.lang.clangd" },
     { import = "lazyvim.plugins.extras.lang.helm" },
     { import = "lazyvim.plugins.extras.lang.sql" },

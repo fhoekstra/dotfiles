@@ -1,5 +1,6 @@
 local ts_js_css_html_formatters = { "oxfmt" }
 local yaml_formatters = { "oxfmt" }
+local md_formatters = { "oxfmt" }
 return {
   "stevearc/conform.nvim",
   optional = true,
@@ -7,6 +8,7 @@ return {
     formatters_by_ft = {
       c = { "clang-format" },
       nix = { "nixfmt" },
+      markdown = { "oxfmt" },
       ansible = yaml_formatters,
       yaml = yaml_formatters,
       json = ts_js_css_html_formatters,
