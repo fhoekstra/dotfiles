@@ -24,7 +24,10 @@ in
   home.username = username;
   home.homeDirectory = homeDir;
 
-  home.sessionVariables.K9S_CONFIG_DIR = "${homeDir}/.config/k9s";
+  home.sessionVariables = {
+    PATH = "${homeDir}/.rustup/toolchains/nightly-aarch64-apple-darwin/bin/:${homeDir}/.cargo/bin/:$PATH";
+    K9S_CONFIG_DIR = "${homeDir}/.config/k9s";
+  };
 
   home.shellAliases = {
     nx = "npx nx";
@@ -33,7 +36,7 @@ in
   programs.zsh.initContent = ''
     ssh-add --apple-load-keychain -q
 
-    export PATH=$PATH:~/.cargo/bin/
+    PATH="$HOME/.rustup/toolchains/nightly-aarch64-apple-darwin/bin/:$HOME/.cargo/bin/:$PATH";
 
     export NVM_DIR="$HOME/.nvm"
     [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
