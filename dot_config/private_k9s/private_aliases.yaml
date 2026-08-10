@@ -14,3 +14,4 @@ aliases:
   cluster: postgresql.cnpg.io/v1/clusters
   pcl: postgresql.cnpg.io/v1/clusters
   ccl: CephCluster
+  chki: clickhousekeeperinstallations
