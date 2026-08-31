@@ -19,6 +19,15 @@
 
 GHOSTTY_APP="Ghostty"
 
+ctrl_l() {
+  # Clear the tab (Ctrl+L) so it's clean
+  osascript -e "
+    tell application \"System Events\"
+      keystroke \"l\" using {control down}
+    end tell
+  "
+
+}
 # Helper: open a new tab and run a command in it
 _new_tab() {
   local dir="$1"
@@ -40,17 +49,14 @@ _new_tab() {
   "
   sleep 0.1
 
-  # Clear the new tab (Ctrl+L) so it's clean
-  osascript -e "
-    tell application \"System Events\"
-      keystroke \"l\" using {control down}
-    end tell
-  "
+  ctrl_l
+
   sleep 0.05
 }
 
 # ── Tab 1: App (current tab, just cd) ─────────────────────────────────────────
 cd ~/Source/BigMile3/ || true
+ctrl_l
 
 # ── Tab 2: k9s ────────────────────────────────────────────────────────────────
 _new_tab "~/Source/BigMile3/"
