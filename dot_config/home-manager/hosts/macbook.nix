@@ -30,7 +30,6 @@ in
   };
 
   home.shellAliases = {
-    nx = "npx nx";
     nb = "netbird";
   };
   programs.zsh.initContent = ''
