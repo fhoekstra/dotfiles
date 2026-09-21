@@ -85,7 +85,6 @@ in
 
     # Kubernetes
     pkgs.kubectl # Kubernetes CLI
-    pkgs.openshift # OpenShift CLI
     pkgs.kubectl-cnpg # Kubernetes CloudNativePG plugin
     pkgs.kubectl-view-secret # Base64 decode secret contents
     pkgs.pv-migrate # Migrate data from 1 PVC to another
