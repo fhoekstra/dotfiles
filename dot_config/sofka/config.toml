@@ -22,3 +22,10 @@ chki = "clickhousekeeperinstallations"
 
 [skin]
 name = "monokai"
+
+[keys.navigation]
+half_page_up = "ctrl-u"
+half_page_down = "ctrl-d"
+
+[keys.table]
+delete = "alt-d"
