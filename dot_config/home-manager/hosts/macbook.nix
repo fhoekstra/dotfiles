@@ -18,7 +18,6 @@ in
 {
   home.packages = [
     pkgs.joplin # notes
-    pkgs.azure-cli
     pkgs.kubelogin # Azure Kubernetes login
   ];
   home.username = username;
