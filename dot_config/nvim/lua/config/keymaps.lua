@@ -34,3 +34,8 @@ vim.keymap.set("n", "<leader>ml", function()
   local esc = vim.api.nvim_replace_termcodes("viw<leader>ml", true, false, true)
   vim.api.nvim_feedkeys(esc, "x", false)
 end, { desc = "Wrap word as markdown link" })
+
+-- Toggle markdown "rendering" (conceal) per window
+vim.keymap.set("n", "<leader>mt", function()
+  vim.opt_local.conceallevel = vim.opt_local.conceallevel:get() == 0 and 2 or 0
+end, { desc = "Toggle conceal (markdown rendering)" })

@@ -13,3 +13,7 @@ vim.opt.relativenumber = true
 vim.opt.swapfile = false
 -- set clipboard
 -- vim.opt.clipboard = "unnamedplus"
+
+-- LazyVim defaults to conceallevel=2, which hides markdown markup (** etc.) on all
+-- non-cursor lines via treesitter conceal; show raw text everywhere instead.
+vim.opt.conceallevel = 0
