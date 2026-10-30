@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "keybinds": {
+    "session.toggle.thinking": "<leader>h"
+  },
+  "theme": {
+    "name": "flexoki",
+    "mode": "dark"
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "prompt": {
+    "paste": "full"
+  },
+  "session": {
+    "sidebar": "hide",
+    "scrollbar": false,
+    "thinking": "show"
+  },
+  "animations": true
+}
