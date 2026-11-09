@@ -45,7 +45,6 @@ let
     # ansible-lint
 
     # Markdown
-    marksman
     mdformat
 
     # Formatter for YAML:
