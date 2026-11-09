@@ -1,5 +1,6 @@
 -- Renders human-readable explanations for cronjobs inline
-return {
-    'fabridamicelli/cronex.nvim',
-    opts = {},
-}
+-- TODO: add cronstrue binary to use this
+-- return {
+--     'fabridamicelli/cronex.nvim',
+--     opts = {},
+-- }
