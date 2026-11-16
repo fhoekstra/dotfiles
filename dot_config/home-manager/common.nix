@@ -97,7 +97,6 @@ in
 
     # Databases
     pkgs.postgresql_18 # Includes pg_dump, pg_restore, etc
-    pkgs.mongosh
     pkgs.rclone # Cloud storage
 
     # Rendering Markdown
